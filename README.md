@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.6
+*Version:* 1.0.7
 
 *URL:* <https://applanga.com> 
 ***
@@ -23,7 +23,11 @@
 - **UI:** Select ***Applanga -> AutoTranslate Scene*** to attach the Applanga AutoTranslate Component to all Objects with a UI.Text Component and all TextMeshes in the current openend scene and to autogenerate Applanga ID's for them.
 All GameObjects that have the AutoTranslate Component attached get translated when they get [Awake](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html) with the current cached translation state and whenever the Applanga SDK retrieves new updated translations. *(see section **5. Automated UI Localization** for more details)* 
 
-- **Scripts:** Use ```Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE")``` calls to retrieve a localized string programmatically. *(see section **4. Script Localization** for more details)
+- **Scripts:** Use the following code to retrieve a localized string programmatically. *(see section **4. Script Localization** for more details)
+  
+  ```csharp
+  Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE")
+  ``` 
 
 - **Synchronization:** When you start a scene that includes the Applanga Object it initializes on [Awake](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html) and  synchronizes the local string data with the Applanga dashboard.
 If you press play from within the Editor, built your game as a Development Build or if *Draft Mode* is activated then all texts that you supply to Applanga.GetString and AutoTranslate(able) Components will also be uploaded to the dashboard after they are activated and if the IDs do not yet exist or if they have empty values. 
@@ -32,13 +36,16 @@ If you press play from within the Editor, built your game as a Development Build
 
 1. To get notified after the localization updates completes (e.g. to show a LoadingScreen at beginning of your App) set a callback event on the ``First Update Callback Event`` of the Applanga gameobject.  The event function should take a bool as parameter, which indicates if the update was successful.
 
-		// example event function
-		public void ApplangaCallbackDelegate (bool success) {
-		}
+	```csharp
+	// example event function
+	public void ApplangaCallbackDelegate (bool success) {
+			...
+	}
+	```
 	
 2. The **Settings** field allows you to specify various optional settings as name/value pairs *(see section **Optional settings**)*.
 3. The **Editor Draft Mode** checkbox allows you to directly activate or deactivate the [Draft Mode](https://applanga.com/#!/docs#draft_on_device_testing). It will be ignored outside of the editor.
-4. The **Use Memory DB** checkbox allows you to switch to an In-memory DB implementation. Please see **In-memory Database** under **Optional Settings** for more Information.
+4. To use Applanga in a WebGL project the **Use Memory DB** checkbox wich allows you to switch to an In-memory DB implementation. Please see **In-memory Database** under **Optional Settings** for more Information.
 5. If you plan to deploy to the **WebGL** platform, please see **In-memory Database** under **Optional Settings** for more Information. 
 
 6. **Script Localization**
@@ -46,29 +53,39 @@ If you press play from within the Editor, built your game as a Development Build
     To load a string for a specific ID in the current language, use the functions described in this section. Note that if the ID you requested does not exist, the default value will be returned and the string may be created in the dashboard. 
  	
    6.1 **Setup**
+   
+   ```csharp
+   using ApplangaSDK;
+   using ApplangaSDK.Unity;
+   ```
+   Should be added to any script that needs to call Applanga methods.
  	
-   Add ```using ApplangaSDK.Unity;``` to any script that needs to call Applanga functions. If you want to initiate an ```ApplangaCallbackDelegate``` (used for content update callbacks), you have to add ```using ApplangaSDK;``` as well.
- 	
-   6.2  **Strings**  
- 		
-       // get a translated string for the current device locale
-       Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE");
-    
-   6.3 **Arguments**
-        
-       // get a translated string with formatted arguments
-       // using the default c# string format parameters {0}, {1}, {2} etc.
-       // @see https://msdn.microsoft.com/en-us/library/system.string.format(v=vs.110).aspx
-       Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", "arg1", "arg2", "arg3");        
+   6.2  **Strings**
+   
+	```csharp
+	// get a translated string for the current device locale
+	Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE");
+	```
 	
+   6.3 **Arguments**
+       
+	```csharp
+	// get a translated string with formatted arguments
+	// using the default c# string format parameters {0}, {1}, {2} etc.
+	// @see https://msdn.microsoft.com/en-us/library/system.string.format(v=vs.110).aspx
+	Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", "arg1", "arg2", "arg3");        
+	```
+   
    6.4 **Named Arguments**
-                
-       // if you pass a Dictionary<string, string> you can get a translated string
-       // with named arguments being inserted. %{someArg} %{anotherArg} etc.
-       Dictionary<string, string> arg = new Dictionary<string, string>()
-       args.Add("someArg","awesome");
-       args.Add("anotherArg","crazy");
-       Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", args);
+   
+	```csharp             
+	// if you pass a Dictionary<string, string> you can get a translated string
+	// with named arguments being inserted. %{someArg} %{anotherArg} etc.
+	Dictionary<string, string> arg = new Dictionary<string, string>()
+	args.Add("someArg","awesome");
+	args.Add("anotherArg","crazy");
+	Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", args);
+	```
         
    Example:
     
@@ -80,27 +97,30 @@ If you press play from within the Editor, built your game as a Development Build
         
    6.5 **Pluralization**
 		
-		// get a string in the given quantity
-		Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", quantity);
+	```csharp 
+	// get a string in the given quantity
+	Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", quantity);
+	```
 		
 	Available pluralization rules:
+
+	```csharp 	
+	Zero,
+	One,
+	Two,
+	Few,
+	Many,
+	Other
+	```
 	
-        Zero,
-        One,
-        Two,
-        Few,
-        Many,
-        Other
+	You specify the quantity (int) as the last parameter and Applanga will pick the best pluralization rule based on: [http://unicode.org/.../language_plural_rules.html	](http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html)
 		
-	You specify the quantity (int) as the last parameter and Applanga will pick the best pluralization rule based on: [http://unicode.org/.../language_plural_rules.html	](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html)
-		
-	In the dashboard you create a **pluralized ID** by appending the Pluralization rule to your **ID** in the following format: ```[zero]```, ```[one]```,```[two]```,```[few]```,```[many]```, ```[other]```.
+	In the dashboard you create a **pluralized ID** by appending the Pluralization rule to your **ID** in the following format: `[zero]`, `[one]`,`[two]`,`[few]`,`[many]`, `[other]`.
 	
 	So the ***zero*** pluralized ID for ***"APPLANGA_ID"*** is ***"APPLANGA_ID[zero]"***.
 	
 	If uploading strings is enabled and you call Applanga.GetString() with a quantity, Applanga will create the corresponding pluralized ID for the supplied default value.
                
-
 7. **Automated UI Localization**
 	
 	You can add the *AutoTranslate* script to any UI.Text component or TextMesh component to have the text automatically translated on [Awake](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html). 
@@ -112,49 +132,56 @@ If you press play from within the Editor, built your game as a Development Build
 	***Note: On Input Fields, *AutoTranslate* components will only be attached to the placeholder Text component and the Input Field itself will not be tranalated.***
 	
 	To only translate a single object or a prefab click **Applanga**->**AutoTranslate selected**. This will add the *AutoTranslate* component to that object and generate an Applanga_ID based on the scene name and the objects hierarchy. 
-	
+
 8. **Update Content**
  
 	To trigger an update call:
-	 	
-		Applanga.Update (  new ApplangaCallbackDelegate((bool success) => {
-            	//enter code to be called when update is complete   
-        }));
-        
+	
+	```csharp
+	Applanga.Update (  new ApplangaCallbackDelegate((bool success) => {
+			//enter code to be called when update is complete   
+	}));
+	```
+	
     This will request the base language along with the long (e.g. "en_US") and short (e.g. "en") versions of the device's current language.
     If you are using groups, be aware that this will only update the **main** group.
     	
     To trigger an update for a specific set of groups (see [groups](https://applanga.com/#!/docs#groups)) and languages call:
-	 	
-	 	List<string> groups = new List<string>();
-        groups.Add("GroupA");
-        groups.Add("GroupB");
-        List<string> languages = new List<string>();
-        languages.Add("en");
-        languages.Add("de");
-        languages.Add("fr_CA");
+    
+	```csharp
+	List<string> groups = new List<string>();
+	groups.Add("GroupA");
+	groups.Add("GroupB");
+	List<string> languages = new List<string>();
+	languages.Add("en");
+	languages.Add("de");
+	languages.Add("fr_CA");
 
-        Applanga.Update(groups, languages, new ApplangaCallbackDelegate((bool success) => {
-            	//enter code to be called when update is complete    
-        }));
- 
+	Applanga.Update(groups, languages, new ApplangaCallbackDelegate((bool success) => {
+			//enter code to be called when update is complete    
+	}));
+	```
+	
 9. **Change Language**
   
   	You can change your app's language at runtime using the following call: 
   	
-		bool success = Applanga.SetLanguage(language);
+	```csharp
+	bool success = Applanga.SetLanguage(language);
+  	```
   	 
   	 *language* must be the iso string of a language that has been added in 	the dashboard. It does not have to correspond to any Unity system language.
   	The return value will be *true* if the language could be set or if it already was the 	current language, otherwise it will be *false*.   	The newly set language will be saved. 
   	To reset it back to the device language call:
-  		
-  		Applanga.SetLanguage(null); 
+  	
+  	```csharp
+	Applanga.SetLanguage(null);
+  	```	
   		
   	The *language* parameter is expected in the format **[language]-[region]** or 	**[language]_[region]** with the region being optional. Examples: "fr_CA", "en-us", "de". 
   	
   	If you have problems switching to a specific language you can update your settings file 	or specifically request that language within an update content call *(see section **7. Update Content**)*. You can also 	specify the language as a default language to have it requested on each update call *(see section **Optional settings**)*.
-  		
-	
+
 10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://applanga.com/#!/docs#draft_on_device_testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
 
 11. **Screenshots for Translation Context** The Applanga SDK offers the functionality to upload screenshots of your app, while collecting meta data such as the current language, resolution and the Applanga translated strings that are visible, 	including their positions.
@@ -176,14 +203,18 @@ If you press play from within the Editor, built your game as a Development Build
  	
  	You have the option to open the screenshot menu programmatically, this also requires the app to be in draft mode:
  		
-		Applanga.SetScreenshotMenuVisible (true);
+ 	```csharp
+	Applanga.SetScreenshotMenuVisible (true);
+  	```	
  				
  	11.3 **Make screenshots programmatically**
  	
  	To create a screenshot programmatically you call the following function:
  	
-		List<string> applangaIDs = new List<string>{"Start","Settings","Quit"};
-		Applanga.CaptureScreenshot("MainMenu", applangaIDs);
+ 	```csharp
+	List<string> applangaIDs = new List<string>{"Start","Settings","Quit"};
+	Applanga.CaptureScreenshot("MainMenu", applangaIDs);
+	```
 			
  	The Applanga SDK tries to find all IDs on the screen but you can pass additional IDs in the **applangaIDs** parameter. 
 
