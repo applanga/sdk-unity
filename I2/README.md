@@ -8,7 +8,7 @@ You can add new strings inside the I2 interface but if you want to edit them you
 ## Installation
 1.  Download and import the ***[Applanga.unitypackage](https://github.com/applanga/sdk-unity/raw/master/Applanga.unitypackage)***. A new menu item labeled **Applanga** will appear in the editor.
 2.  You can always get the latest version by clicking ***Applanga -> Update SDK***.
-3. Download and import the ***[I2Applanga.unitypackage](https://github.com/applanga/sdk-unity/raw/master/I2/I2Applanga.unitypackage)***.
+3. Download and import the ***[I2Applanga.unitypackage](https://github.com/applanga/sdk-unity/raw/master/I2/I2Applanga.unityPackage)***.
 
 ## Configuration
 1. Download the *Applanga Settings File* for your project from the Applanga app overview in the dashboard by clicking the ***[Prepare Release]*** button and then clicking ***[Get Settings File]***. 
