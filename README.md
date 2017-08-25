@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.21
+*Version:* 1.0.22
 
 *URL:* <https://applanga.com> 
 ***
