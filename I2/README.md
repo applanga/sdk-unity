@@ -22,4 +22,4 @@ You can add new strings inside the I2 interface but if you want to edit them you
 
 Go To ***Applanga -> I2 Localization Sync*** to update the latest localizations in Unity. Additionally Applanga will always fetch the latest strings for the current language when you start the game or enter playmode.
 
-For more info please refer to the I2 Documentation on how to use I2 and the [Applanga Documentation and Chat](https://applanga.com/#!/docs) on how to use Applanga
+For more info please refer to the I2 Documentation on how to use I2 and the [Applanga Documentation and Chat](https://www.applanga.com/docs) on how to use Applanga

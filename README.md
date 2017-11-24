@@ -1,8 +1,8 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.35
+*Version:* 1.0.36
 
-*URL:* <https://applanga.com> 
+*URL:* <https://www.applanga.com> 
 ***
 
 ## Installation
@@ -44,7 +44,7 @@ If you press play from within the Editor, built your game as a Development Build
 	```
 	
 2. The **Settings** field allows you to specify various optional settings as name/value pairs *(see section **Optional settings**)*.
-3. The **Editor Draft Mode** checkbox allows you to directly activate or deactivate the [Draft Mode](https://applanga.com/#!/docs#draft_on_device_testing). It will be ignored outside of the editor.
+3. The **Editor Draft Mode** checkbox allows you to directly activate or deactivate the [Draft Mode](https://applanga.com/docs#draft_on_device_testing). It will be ignored outside of the editor.
 4. To use Applanga in a WebGL project the **Use Memory DB** checkbox wich allows you to switch to an In-memory DB implementation. Please see **In-memory Database** under **Optional Settings** for more Information.
 5. If you plan to deploy to the **WebGL** platform, please see **In-memory Database** under **Optional Settings** for more Information. 
 
@@ -146,7 +146,7 @@ If you press play from within the Editor, built your game as a Development Build
     This will request the base language along with the long (e.g. "en_US") and short (e.g. "en") versions of the device's current language.
     If you are using groups, be aware that this will only update the **main** group.
     	
-    To trigger an update for a specific set of groups (see [groups](https://applanga.com/#!/docs#groups)) and languages call:
+    To trigger an update for a specific set of groups (see [groups](https://applanga.com/docs#groups)) and languages call:
     
 	```csharp
 	List<string> groups = new List<string>();
@@ -182,19 +182,19 @@ If you press play from within the Editor, built your game as a Development Build
   	
   	If you have problems switching to a specific language you can update your settings file 	or specifically request that language within an update content call *(see section **7. Update Content**)*. You can also 	specify the language as a default language to have it requested on each update call *(see section **Optional settings**)*.
 
-10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://applanga.com/#!/docs#draft_on_device_testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
+10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://applanga.com/docs#draft_on_device_testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
 
 11. **Screenshots for Translation Context** The Applanga SDK offers the functionality to upload screenshots of your app, while collecting meta data such as the current language, resolution and the Applanga translated strings that are visible, 	including their positions.
  	Each screenshot will be assigned to a tag. A tag may have multiple screenshots with differing core meta data: language, app version, device, plattform, OS and resolution. 
  	
- 	You can read more here: [Manage Tags](https://applanga.com/#!/docs#manage_tags) and here: [Uploading screenshots](https://applanga.com/#!/docs#uploading_screenshots).
+ 	You can read more here: [Manage Tags](https://applanga.com/docs#manage_tags) and here: [Uploading screenshots](https://applanga.com/docs#uploading_screenshots).
  	
  	11.1 **Make screenshots manually**
  	
- 	To manually make a screenshot you first have to set your app into [draft mode](https://applanga.com/#!/docs#draft_on_device_testing).
+ 	To manually make a screenshot you first have to set your app into [draft mode](https://applanga.com/docs#draft_on_device_testing).
  	 
  	With your app in draft mode, all you have to do is to make a two finger swipe downwards.
- 	This will show the screenshot menu and load a list of [tags](https://applanga.com/#!/docs#manage_tags). 
+ 	This will show the screenshot menu and load a list of [tags](https://applanga.com/docs#manage_tags).
  	
  	You can now choose a tag and press *capture screenshot* to capture and upload a screenshot including all meta data for the currently visible screen and assign it to the selected tag.
  	Tags have to be created in the dashboard before they are available in the screenshot menu.
