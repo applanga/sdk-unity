@@ -4,11 +4,17 @@
 ***
 
 
+### Version 1.0.37 (14 Dec 2017)
+#### Changed
+- fixed accidental draftmode activation
+
+---
 ### Version 1.0.36 (24 Nov 2017)
 #### Changed
 - added changelog
 - added GetLanguage method to get current used language
 
+---
 #### Fixed
 - local cache issue
 - updated current language crash
