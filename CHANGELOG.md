@@ -4,6 +4,11 @@
 ***
 
 
+### Version 1.0.38 (15 Dec 2017)
+#### Fixed
+- fixed possible request timeout when changing scenes
+
+---
 ### Version 1.0.37 (14 Dec 2017)
 #### Changed
 - fixed accidental draftmode activation
