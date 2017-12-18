@@ -4,7 +4,7 @@
 ***
 
 
-### Version 1.0.38 (15 Dec 2017)
+### Version 1.0.39 (18 Dec 2017)
 #### Fixed
 - fixed possible request timeout when changing scenes
 
