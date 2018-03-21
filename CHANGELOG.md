@@ -4,7 +4,20 @@
 ***
 
 
+### Version 1.0.41 (21 Mar 2018)
+#### Changed
+- added docs link on component
+
+---
 ### Version 1.0.40 (21 Mar 2018)
+#### Changed
+- update demoscene with language switch and testaccount
+
+#### Fixed
+- unity 2017.3 compatibility
+
+---
+### Version 1.0.39 (18 Dec 2017)
 #### Fixed
 - fixed possible request timeout when changing scenes
 
