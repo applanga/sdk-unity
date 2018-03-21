@@ -1,9 +1,19 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.39
+*Version:* 1.0.40
 
 *URL:* <https://www.applanga.com> 
 ***
+
+
+## Table of Contents
+
+  1. [Installation](#installation)
+  1. [Configuration](#configuration)
+  1. [Usage](#usage)
+  1. [Optional settings](#optional-settings)
+  1. [Unity Language mapping](#unity-language-mapping)
+
 
 ## Installation
 1.  Download and import the ***[Applanga.unitypackage](https://github.com/applanga/sdk-unity/raw/master/Applanga.unitypackage)***. A new menu item labeled **Applanga** will appear in the editor.
