@@ -6,6 +6,11 @@
 ***
 
 
+### Version 1.0.44 (12 Jun 2018)
+#### Added
+- delta update support for smaller response size
+
+---
 ### Version 1.0.43 (12 Jun 2018)
 #### Fixed
 - initialization error on iOS from Unity 2017.4 and Unity 2018
