@@ -1,9 +1,16 @@
 # Applanga SDK for Unity CHANGELOG
 ***
 *URL:* <https://www.applanga.com> 
+
+*Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
 
+### Version 1.0.43 (12 Jun 2018)
+#### Fixed
+- initialization error on iOS from Unity 2017.4 and Unity 2018
+
+---
 ### Version 1.0.41 (21 Mar 2018)
 #### Changed
 - added docs link on component

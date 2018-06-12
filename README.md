@@ -1,18 +1,20 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.41
+*Version:* 1.0.43
 
-*URL:* <https://www.applanga.com> 
+*Website:* <https://www.applanga.com> 
+
+*Changelog:* <https://www.applanga.com/changelog/unity>
 ***
 
 
 ## Table of Contents
 
   1. [Installation](#installation)
-  1. [Configuration](#configuration)
-  1. [Usage](#usage)
-  1. [Optional settings](#optional-settings)
-  1. [Unity Language mapping](#unity-language-mapping)
+  2. [Configuration](#configuration)
+  3. [Usage](#usage)
+  4. [Optional settings](#optional-settings)
+  5. [Unity Language mapping](#unity-language-mapping)
 
 
 ## Installation
