@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.44
+*Version:* 1.0.53
 
 *Website:* <https://www.applanga.com> 
 
@@ -25,9 +25,11 @@
 1. Download the *Applanga Settings File* for your project from the Applanga app overview in the dashboard by clicking the ***[Prepare Release]*** button and then clicking ***[Get Settings File]***. 
 2. Add the *Applanga Settings File* to your ***Resources*** folder. The file extension will be automatically changed to *'.applanga.bytes'*. This will happen when adding the file as an asset or when executing the next step.
 3. Select ***Applanga -> Initialize -> For Sqlite*** to use the default Sqlite database implementation or ***Applanga -> Initialize -> For In-Memory DB*** to use an in-memory database implementation and the Applanga object will be added to your scene. This should be done at least on the first scene that your game loads. The Applanga object is set to not be destroyed on scene change.
-3. Now, if you start your game you should see a log message that confirms that Applanga was initialized or a warning in case of a missing settings file.
+4. Now, if you start your game you should see a log message that confirms that Applanga was initialized or a warning in case of a missing settings file.
 
-
+---
+###### ***KNOWN ISSUE:*** *If you initialized for Sqlite and use the scripting Runtime Version 4.0 instead of 3.5 you need to manually remove the file Applanga/Internal/Libs/System.Data.dll (This will be done automatically with the next update).*
+---
 ## Usage
 
 ### Basic:

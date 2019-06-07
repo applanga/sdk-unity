@@ -1,11 +1,20 @@
 # Applanga SDK for Unity CHANGELOG
 ***
-*URL:* <https://www.applanga.com> 
+*Website:* <https://www.applanga.com> 
 
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 1.0.53 (7 Jun 2019)
+#### Added
+- updates to work with latest unity version
+- editor ui to add and remove AutoTranslate components
+- intorduced DoNoTranslate component to ignore AutoTranslate component
+- editor ui to configure id generation
+- TextMeshPro support
+- android il2cpp arm 64 bit support
 
+---
 ### Version 1.0.44 (12 Jun 2018)
 #### Added
 - delta update support for smaller response size
