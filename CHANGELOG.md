@@ -5,6 +5,11 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 1.0.54 (11 Sep 2019)
+#### Added
+- added ApplangaInitialUpdate setting
+- BugFix: Unity android Gzip handling
+
 ### Version 1.0.53 (7 Jun 2019)
 #### Added
 - updates to work with latest unity version

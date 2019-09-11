@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.53
+*Version:* 1.0.54
 
 *Website:* <https://www.applanga.com> 
 
@@ -263,6 +263,15 @@ It will automatically be used if you build for the *WebGL* platform, due to plat
 
 If you want to deploy for another platform and use Sqlite you have to execute ***Applanga -> Initialize -> For Sqlite***.
 
+**Disable Update On Start**
+
+If you wish to stop the sdk from automatically updating your strings on app launch you can set the following to the settings on the applanga object.
+
+	...
+   	ApplangaInitialUpdate
+	false
+	...
+	You will still be able to call Applanga.Update() at any time to update your strings manually
 
 ## Unity Language mapping
 
