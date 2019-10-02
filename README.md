@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.55
+*Version:* 1.0.56
 
 *Website:* <https://www.applanga.com> 
 
@@ -267,11 +267,18 @@ If you want to deploy for another platform and use Sqlite you have to execute **
 
 If you wish to stop the sdk from automatically updating your strings on app launch you can set the following to the settings on the applanga object.
 
-	...
    	ApplangaInitialUpdate
 	false
-	...
-	You will still be able to call Applanga.Update() at any time to update your strings manually
+	
+You will still be able to call Applanga.Update() at any time to update your strings manually
+
+**Disable Draft Mode**
+
+If you wish to create a build that cannot enable draft mode at any time, you can include the following setting to your Applanga object.
+
+   	ApplangaDraftModeEnabled
+	false
+	
 
 ## Unity Language mapping
 

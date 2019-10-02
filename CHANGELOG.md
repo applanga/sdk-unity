@@ -5,11 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
-### Version 1.0.55 (26 Sep 2019)
+### Version 1.0.56 (2 Oct 2019)
 #### Added
 
 - added check for keys longer than 997 bytes to meet database requirements
 - added check for new lines in keys
+- added ApplangaDraftModeEnabled setting
 
 #### Fixed
 - Fixed Warnings for cleaning up auto created ApplangaObjects
