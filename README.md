@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.56
+*Version:* 1.0.57
 
 *Website:* <https://www.applanga.com> 
 
@@ -278,6 +278,20 @@ If you wish to create a build that cannot enable draft mode at any time, you can
 
    	ApplangaDraftModeEnabled
 	false
+	
+**Automatic Applanga Settings File Update**
+
+In case your app's user has no internet connection, new translation updates can't be fetched, so the Applanga SDK falls back to the last locally cached version. If the app was started for the first time, there are no strings locally cached yet so Applanga SDK falls back to the Applanga Settings File which contains all strings from the moment it was generated, downloaded and integrated into your app before release.
+
+To minimize the manual effort of updating the Applanga Settings File, we created a task which triggers the Applanga Settings File generation if changes were made and replace the old one with the new one in your app.
+
+Be aware that the task will not fail if there is no internet connection, to be able to develop offline. In this case, a warning is printed. To activate the Automatic Settings File Update, toggle the "Applanga/Auto Update Settings File on Build" menu item at the top of your unity window.
+
+To make sure that the script is running and to see when it does or doesnt update, check the unity logs after a build. There you will find logs for each update step.
+
+If the file is update successfully you shoudl see the log "Settingsfile updated!". If it is already up to date you will see the log "Settingsfile up-to-date".
+
+You can also trigger a settingd file update manually with the "Applanga/Update Settingd File Now" Menu item.
 	
 
 ## Unity Language mapping

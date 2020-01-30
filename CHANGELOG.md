@@ -5,7 +5,16 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 1.0.57 (30 Jan 2020)
+#### Added
+
+- automatic and manual setting file update menu items
+- Including strings with missing keys when taking a screen shot
+- Sending current language when reporting an issue
+---
+
 ### Version 1.0.56 (2 Oct 2019)
+
 #### Added
 
 - added check for keys longer than 997 bytes to meet database requirements
