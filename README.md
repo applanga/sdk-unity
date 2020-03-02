@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 1.0.57
+*Version:* 2.0.66
 
 *Website:* <https://www.applanga.com> 
 
@@ -146,6 +146,10 @@ If you press play from within the Editor, built your game as a Development Build
 	***Note: On Input Fields, *AutoTranslate* components will only be attached to the placeholder Text component and the Input Field itself will not be tranalated.***
 	
 	To only translate a single object or a prefab click **Applanga**->**AutoTranslate selected**. This will add the *AutoTranslate* component to that object and generate an Applanga_ID based on the scene name and the objects hierarchy. 
+	
+	If you would like a text field to be ignored by the Autotranslate feature, then you can attach the **DoNotTranslate** component.
+		
+	 If you would still like that text element to be included in screenshots uploaded to the applanga dashboard you can add any applanga keys you like in the **DoNotTranslate  AdditionalScreenshotIds** string array in the inspector.
 
 8. **Update Content**
  

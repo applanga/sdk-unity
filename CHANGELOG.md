@@ -5,12 +5,23 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.66 (2 Mar 2020)
+#### Added
+- Added DoNotTranslate string array to the DoNotTranslate and AutoTranslate components.
+- Added support for TextMeshProUGUI Component
+
+#### Fixed
+- fix for preprocess build script in 2017
+
+
+---
 ### Version 1.0.57 (30 Jan 2020)
 #### Added
 
 - automatic and manual setting file update menu items
 - Including strings with missing keys when taking a screen shot
 - Sending current language when reporting an issue
+
 ---
 
 ### Version 1.0.56 (2 Oct 2019)
