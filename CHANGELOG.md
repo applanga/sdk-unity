@@ -5,6 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.67 (2 Apr 2020)
+#### Fixed
+- Changed all usages of the WWW class to use UnityWebRequests.
+
+
+---
 ### Version 2.0.66 (2 Mar 2020)
 #### Added
 - Added DoNotTranslate string array to the DoNotTranslate and AutoTranslate components.
