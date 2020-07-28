@@ -5,6 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.69 (28 Jul 2020)
+#### Fixed
+- Automatic removal of language databases that dont exist on the dashboard
+- Gzip enabled for get requests
+
+---
 ### Version 2.0.67 (2 Apr 2020)
 #### Fixed
 - Changed all usages of the WWW class to use UnityWebRequests.
@@ -29,7 +35,6 @@
 - Sending current language when reporting an issue
 
 ---
-
 ### Version 1.0.56 (2 Oct 2019)
 
 #### Added

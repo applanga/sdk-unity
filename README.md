@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.67
+*Version:* 2.0.69
 
 *Website:* <https://www.applanga.com> 
 
@@ -58,7 +58,7 @@ If you press play from within the Editor, built your game as a Development Build
 	```
 	
 2. The **Settings** field allows you to specify various optional settings as name/value pairs *(see section **Optional settings**)*.
-3. The **Editor Draft Mode** checkbox allows you to directly activate or deactivate the [Draft Mode](https://applanga.com/docs#draft_on_device_testing). It will be ignored outside of the editor.
+3. The **Editor Draft Mode** checkbox allows you to directly activate or deactivate the [Draft Mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing). It will be ignored outside of the editor.
 4. To use Applanga in a WebGL project the **Use Memory DB** checkbox wich allows you to switch to an In-memory DB implementation. Please see **In-memory Database** under **Optional Settings** for more Information.
 5. If you plan to deploy to the **WebGL** platform, please see **In-memory Database** under **Optional Settings** for more Information. 
 
@@ -200,7 +200,7 @@ If you press play from within the Editor, built your game as a Development Build
   	
   	If you have problems switching to a specific language you can update your settings file 	or specifically request that language within an update content call *(see section **7. Update Content**)*. You can also 	specify the language as a default language to have it requested on each update call *(see section **Optional settings**)*.
 
-10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://applanga.com/docs#draft_on_device_testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
+10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
 
 11. **Screenshots for Translation Context** The Applanga SDK offers the functionality to upload screenshots of your app, while collecting meta data such as the current language, resolution and the Applanga translated strings that are visible, 	including their positions.
  	Each screenshot will be assigned to a tag. A tag may have multiple screenshots with differing core meta data: language, app version, device, plattform, OS and resolution. 
@@ -209,7 +209,7 @@ If you press play from within the Editor, built your game as a Development Build
  	
  	11.1 **Make screenshots manually**
  	
- 	To manually make a screenshot you first have to set your app into [draft mode](https://applanga.com/docs#draft_on_device_testing).
+ 	To manually make a screenshot you first have to set your app into [draft mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing).
  	 
  	With your app in draft mode, all you have to do is to make a two finger swipe downwards.
  	This will show the screenshot menu and load a list of [tags](https://applanga.com/docs#manage_tags).
