@@ -5,6 +5,15 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.70 (9 Jul 2021)
+#### Added
+- Error when key is too big
+- Draft menu redesign
+
+#### Fixed
+- Unity 2020 compatibility and embedded demo project
+
+---
 ### Version 2.0.69 (28 Jul 2020)
 #### Fixed
 - Automatic removal of language databases that dont exist on the dashboard
