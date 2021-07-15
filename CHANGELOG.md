@@ -5,6 +5,11 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.71 (15 Jul 2021)
+#### Fixed
+- Font not properly shown for embedded Sample Scene
+
+---
 ### Version 2.0.70 (9 Jul 2021)
 #### Added
 - Error when key is too big
