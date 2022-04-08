@@ -5,6 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.72 (8 Apr 2022)
+#### Fixed
+- Removed use of gzip compression for Windows platform
+- Hotfix for issue with db delete
+
+---
 ### Version 2.0.71 (15 Jul 2021)
 #### Fixed
 - Font not properly shown for embedded Sample Scene
