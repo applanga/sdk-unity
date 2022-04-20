@@ -5,6 +5,13 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.73 (20 Apr 2022)
+#### Fixed
+- Changed missing settings file errors to warnings for more user friendly indicator
+- Changes fetching of Mono.Data.SQL.dll to unity-jit according to platform
+- Fixes all current issues with creation and deletion of DB's on Sqlite
+
+---
 ### Version 2.0.72 (8 Apr 2022)
 #### Fixed
 - Removed use of gzip compression for Windows platform
