@@ -5,6 +5,13 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.74 (6 May 2022)
+#### Fixed
+- Changed Applanga UnitySDK dependencies to .net 4.6.1, solves issue with hard reference to .net 2.0.0
+- Changes fetching of Mono.Data.SQL.dll according to platform and Unity version
+- Changed a deprecated method to current version for fetching iOS device target 
+
+---
 ### Version 2.0.73 (20 Apr 2022)
 #### Fixed
 - Changed missing settings file errors to warnings for more user friendly indicator
