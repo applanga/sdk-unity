@@ -5,6 +5,13 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.76 (7 Jun 2022)
+#### Fixed
+- Fixes issue when user destroys Applanga object manually, by catching and giving a warning to user 
+- Fixes null reference exception on XRSettings on iOS builds 
+
+
+---
 ### Version 2.0.74 (6 May 2022)
 #### Fixed
 - Changed Applanga UnitySDK dependencies to .net 4.6.1, solves issue with hard reference to .net 2.0.0
