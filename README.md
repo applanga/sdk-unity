@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.76
+*Version:* 2.0.79
 
 *Website:* <https://www.applanga.com> 
 
@@ -143,7 +143,7 @@ If you press play from within the Editor, built your game as a Development Build
 	
 	If you do not want to use the automatically generated IDs you can override them in the AutoTranslate component.
 	
-	***Note: On Input Fields, *AutoTranslate* components will only be attached to the placeholder Text component and the Input Field itself will not be tranalated.***
+	***Note: On Input Fields, *AutoTranslate* components will only be attached to the placeholder Text component and the Input Field itself will not be translated.***
 	
 	To only translate a single object or a prefab click **Applanga**->**AutoTranslate selected**. This will add the *AutoTranslate* component to that object and generate an Applanga_ID based on the scene name and the objects hierarchy. 
 	
