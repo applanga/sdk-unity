@@ -5,6 +5,11 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.87 (23 Jun 2023)
+#### Fixed
+- Fixed values not properly return for draft mode
+
+---
 ### Version 2.0.79 (19 Nov 2022)
 #### Fixed
 - Fixed deprecated methods and dependencies
