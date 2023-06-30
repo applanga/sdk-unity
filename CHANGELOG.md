@@ -5,7 +5,7 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
-### Version 2.0.88 (29 Jun 2023)
+### Version 2.0.89 (30 Jun 2023)
 #### Fixed
 - Resolved caching issues with draft values
 
