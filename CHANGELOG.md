@@ -5,6 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+
+### Version 2.0.90 (1 Sep 2023)
+#### Fixed
+- Resolved did issue on huawei phones
+
+---
 ### Version 2.0.89 (30 Jun 2023)
 #### Fixed
 - Resolved caching issues with draft values
