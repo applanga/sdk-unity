@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.90
+*Version:* 2.0.91
 
 *Website:* <https://www.applanga.com> 
 
@@ -113,7 +113,7 @@ If you press play from within the Editor, built your game as a Development Build
 		
 	```csharp 
 	// get a string in the given quantity
-	Applanga.GetString("APPLANGA_ID", "DEFAULT_VALUE", quantity);
+	Applanga.GetQuantityString("APPLANGA_ID", "DEFAULT_VALUE", quantity);
 	```
 		
 	Available pluralization rules:
@@ -133,7 +133,7 @@ If you press play from within the Editor, built your game as a Development Build
 	
 	So the ***zero*** pluralized ID for ***"APPLANGA_ID"*** is ***"APPLANGA_ID[zero]"***.
 	
-	If uploading strings is enabled and you call Applanga.GetString() with a quantity, Applanga will create the corresponding pluralized ID for the supplied default value.
+	If uploading strings is enabled and you call Applanga.GetQuantityString() with a quantity, Applanga will create the corresponding pluralized ID for the supplied default value.
                
 7. **Automated UI Localization**
 	
