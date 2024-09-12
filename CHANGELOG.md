@@ -5,6 +5,18 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.94 (12 Sep 2024)
+#### Added
+- Added branching to the Unity SDK
+- Added a screenshot menu toggle button to the inspector view in the Unity editor
+- Added a draft mode activation dialog toggle button to the inspector view in the Unity editor
+- Added draft mode activation dialog toggle keyboard shortcuts
+
+#### Fixed
+- Fixed the screenshot menu toggle keyboard shortcuts
+- Fixed bug where it was not possible to switch to a branch if a settings file had never been opened with that branch as the default branch.
+
+---
 ### Version 2.0.91 (25 Jan 2024)
 #### Fixed
 - Added integration header

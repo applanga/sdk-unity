@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.91
+*Version:* 2.0.94
 
 *Website:* <https://www.applanga.com> 
 
@@ -202,6 +202,14 @@ If you press play from within the Editor, built your game as a Development Build
 
 10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
 
+	10.1 **Display draft mode activation dialog programmatically**
+ 	
+ 	You have the option to open the draft mode activation dialog programmatically:
+ 		
+ 	```csharp
+	Applanga.SetDraftModeActivationDialogVisible (true);
+	```
+	
 11. **Screenshots for Translation Context** The Applanga SDK offers the functionality to upload screenshots of your app, while collecting meta data such as the current language, resolution and the Applanga translated strings that are visible, 	including their positions.
  	Each screenshot will be assigned to a tag. A tag may have multiple screenshots with differing core meta data: language, app version, device, plattform, OS and resolution. 
  	
@@ -212,7 +220,7 @@ If you press play from within the Editor, built your game as a Development Build
  	To manually make a screenshot you first have to set your app into [draft mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing).
  	 
  	With your app in draft mode, all you have to do is to make a two finger swipe downwards.
- 	This will show the screenshot menu and load a list of [tags](https://applanga.com/docs#manage_tags).
+ 	This will show the screenshot menu and load a list of [tags](https://applanga.com/docs#manage_tags). You can also toggle this menu by clicking on the 'Show/Hide Screenshot menu' button in the Inspector window. You will need to select the Applanga gameobject in order to see this Inspector window.
  	
  	You can now choose a tag and press *capture screenshot* to capture and upload a screenshot including all meta data for the currently visible screen and assign it to the selected tag.
  	Tags have to be created in the dashboard before they are available in the screenshot menu.
@@ -297,6 +305,14 @@ If the file is update successfully you shoudl see the log "Settingsfile updated!
 
 You can also trigger a settingd file update manually with the "Applanga/Update Settingd File Now" Menu item.
 	
+## Branching
+
+If your project is a branching project use at least SDK version 2.0.94 and update your settings file.
+The settings file defines the default branch for your current app.
+This branch is used on app start and for update calls.
+To be sure branching is working look for the log line: `Branching is enabled.`
+
+To learn more about branching please have a look [here](https://www.applanga.com/docs/advanced-features/branching).
 
 ## Unity Language mapping
 
