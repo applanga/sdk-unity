@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.95
+*Version:* 2.0.96
 
 *Website:* <https://www.applanga.com> 
 
@@ -307,7 +307,7 @@ You can also trigger a settingd file update manually with the "Applanga/Update S
 	
 ## Branching
 
-If your project is a branching project use at least SDK version 2.0.95 and update your settings file.
+If your project is a branching project use at least SDK version 2.0.96 and update your settings file.
 The settings file defines the default branch for your current app.
 This branch is used on app start and for update calls.
 To be sure branching is working look for the log line: `Branching is enabled.`
