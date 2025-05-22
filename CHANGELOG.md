@@ -5,6 +5,14 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.95 (22 May 2025)
+#### Added
+- Get current branch and show it in the Unity editor when Applanga GameObject is selected.
+- Added branch chooser to draft mode dialog.
+- Fixed screenshot upload from other branch than the default branch.
+- General improvements.
+
+---
 ### Version 2.0.94 (12 Sep 2024)
 #### Added
 - Added branching to the Unity SDK

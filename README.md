@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.94
+*Version:* 2.0.95
 
 *Website:* <https://www.applanga.com> 
 
@@ -200,7 +200,7 @@ If you press play from within the Editor, built your game as a Development Build
   	
   	If you have problems switching to a specific language you can update your settings file 	or specifically request that language within an update content call *(see section **7. Update Content**)*. You can also 	specify the language as a default language to have it requested on each update call *(see section **Optional settings**)*.
 
-10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
+10. **Draft Mode** To activate draft mode (see the dashboard docu on [Draft Mode](https://www.applanga.com/docs/translation-management-dashboard/draft_on-device-testing)) on any touch devices you have to hold four fingers down on the screen for four seconds and enter the draft mode key in the Dialog. If you are using branching, you can also change the branch at this point if you wish. In the Editor you can tick or untick the ``Editor Draft Mode`` check box on the Applanga object to activate or deactivate the draft mode directly, this will only have an effect inside the editor.
 
 	10.1 **Display draft mode activation dialog programmatically**
  	
@@ -307,7 +307,7 @@ You can also trigger a settingd file update manually with the "Applanga/Update S
 	
 ## Branching
 
-If your project is a branching project use at least SDK version 2.0.94 and update your settings file.
+If your project is a branching project use at least SDK version 2.0.95 and update your settings file.
 The settings file defines the default branch for your current app.
 This branch is used on app start and for update calls.
 To be sure branching is working look for the log line: `Branching is enabled.`
