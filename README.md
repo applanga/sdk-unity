@@ -1,6 +1,6 @@
 # Applanga SDK for Unity
 ***
-*Version:* 2.0.96
+*Version:* 2.0.97
 
 *Website:* <https://www.applanga.com> 
 
@@ -244,6 +244,17 @@ If you press play from within the Editor, built your game as a Development Build
 			
  	The Applanga SDK tries to find all IDs on the screen but you can pass additional IDs in the **applangaIDs** parameter. 
 
+12. **Get Available Languages**
+  
+  	You can get a list of the two-letter ISO language codes for the languages of the current project using the following call: 
+  	
+	```csharp
+	IEnumerable<string> languageCodes = Applanga.AvailableLanguages;
+  	```
+  	 
+	Note that before you make this call, you should do an Update() call if the languages may have changed on your dashboard.
+
+
 
 ## Optional settings
 
@@ -307,7 +318,7 @@ You can also trigger a settingd file update manually with the "Applanga/Update S
 	
 ## Branching
 
-If your project is a branching project use at least SDK version 2.0.96 and update your settings file.
+If your project is a branching project use at least SDK version 2.0.97 and update your settings file.
 The settings file defines the default branch for your current app.
 This branch is used on app start and for update calls.
 To be sure branching is working look for the log line: `Branching is enabled.`

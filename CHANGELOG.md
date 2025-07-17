@@ -5,6 +5,12 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.97 (17 Jul 2025)
+#### Fixed
+- Now do not add the Applanga GameObject when switching Play Mode.
+- Fixed the problem that draft mode could never really be deactivated in the app.
+
+---
 ### Version 2.0.96 (22 May 2025)
 #### Added
 - Get current branch and show it in the Unity editor when Applanga GameObject is selected.
