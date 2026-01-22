@@ -5,6 +5,11 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.98 (22 Jan 2026)
+#### Fixed
+- Updated libsqlite3.so lib to fix security warnings.
+
+---
 ### Version 2.0.97 (17 Jul 2025)
 #### Fixed
 - Now do not add the Applanga GameObject when switching Play Mode.
