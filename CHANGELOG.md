@@ -5,6 +5,11 @@
 *Applanga Unity Documentation:* <https://www.applanga.com/docs-integration/unity> 
 ***
 
+### Version 2.0.99 (23 Mar 2026)
+#### Fixed
+- Updated the sqlite libraries to use a page size of 16kb.
+
+---
 ### Version 2.0.98 (22 Jan 2026)
 #### Fixed
 - Updated libsqlite3.so lib to fix security warnings.
